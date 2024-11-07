@@ -1,4 +1,4 @@
-from PySide6 import QtGui
+from PySide import QtGui
 import FreeCAD
 
 
@@ -20,7 +20,7 @@ class SafeViewer(QtGui.QWidget):
             self.enable()
         else:
             import FreeCADGui
-            from PySide6 import QtCore
+            from PySide import QtCore
 
             self.displaying_warning = True
             self.lbl_warning = QtGui.QTextEdit()
@@ -114,7 +114,7 @@ class SafeViewer(QtGui.QWidget):
 
 """
 # Example use:
-from PySide6 import QtGui
+from PySide import QtGui
 import pivy
 from SafeViewer import SafeViewer
 sv = SafeViewer()

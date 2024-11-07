@@ -3,7 +3,7 @@ import FreeCAD as App
 
 
 def loadAllWorkbenches():
-    from PySide6 import QtGui
+    from PySide import QtGui
     import FreeCADGui
 
     activeWorkbench = FreeCADGui.activeWorkbench().name()
@@ -80,7 +80,7 @@ def refreshToolbars(doLoadAllWorkbenches=True):
 
 
 def refreshToolsAction():
-    from PySide6 import QtGui
+    from PySide import QtGui
 
     print("Refresh list of tools")
     fw = QtGui.QApplication.focusWidget()

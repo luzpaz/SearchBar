@@ -1,4 +1,4 @@
-from PySide6 import QtGui
+from PySide import QtGui
 
 
 # Inspired by https://stackoverflow.com/a/5443220/324969

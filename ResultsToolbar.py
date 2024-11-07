@@ -1,4 +1,4 @@
-from PySide6 import QtGui
+from PySide import QtGui
 import FreeCADGui
 import Serialize
 

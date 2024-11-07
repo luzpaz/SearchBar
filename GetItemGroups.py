@@ -13,7 +13,7 @@ def onResultSelected(index, groupId):
     if handlerName in SearchResults.actionHandlers:
         SearchResults.actionHandlers[handlerName](nfo)
     else:
-        from PySide6 import QtGui
+        from PySide import QtGui
 
         QtGui.QMessageBox.warning(
             None,

@@ -6,7 +6,7 @@ tbr = None
 
 def addToolSearchBox():
     import FreeCADGui
-    from PySide6 import QtGui
+    from PySide import QtGui
     import SearchBoxLight
 
     global wax, sea, tbr
