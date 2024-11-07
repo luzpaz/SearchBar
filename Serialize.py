@@ -74,15 +74,7 @@ def deserializeIcon(iconPixmaps):
                 for strState, statePixmap in modePixmaps.items():
                     state = {"off": QtGui.QIcon.State.Off, "on": QtGui.QIcon.State.On}[strState]
                     pxm = QtGui.QPixmap()
-                    # pxm.loadFromData(
-                    #     QtCore.QByteArray.fromBase64(QtCore.QTextCodec.codecForName("UTF-8").fromUnicode(statePixmap))
-                    # )
-                    # t = QtCore.QTextStream(bytearray(statePixmap))
-                    # t.setEncoding(QtCore.QStringDecoder.Encoding.Utf8)
-                    # pxm.loadFromData(t.readAll())
-                    encoded = statePixmap.encode("utf-8")
-                    array = bytearray(encoded)
-                    pxm.loadFromData(array)
+                    pxm.loadFromData(QtCore.QByteArray.fromBase64(bytearray(statePixmap.encode("utf-8"))))
                     ico.addPixmap(pxm, mode, state)
     return ico
 
