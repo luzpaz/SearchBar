@@ -77,9 +77,12 @@ def deserializeIcon(iconPixmaps):
                     # pxm.loadFromData(
                     #     QtCore.QByteArray.fromBase64(QtCore.QTextCodec.codecForName("UTF-8").fromUnicode(statePixmap))
                     # )
-                    t = QtCore.QTextStream(statePixmap)
-                    t.setEncoding(QtCore.QStringDecoder.Encoding.Utf8)
-                    pxm.loadFromData(t.readAll())
+                    # t = QtCore.QTextStream(bytearray(statePixmap))
+                    # t.setEncoding(QtCore.QStringDecoder.Encoding.Utf8)
+                    # pxm.loadFromData(t.readAll())
+                    encoded = statePixmap.encode("utf-8")
+                    array = bytearray(encoded)
+                    pxm.loadFromData(array)
                     ico.addPixmap(pxm, mode, state)
     return ico
 
